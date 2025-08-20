@@ -4,12 +4,17 @@ public class SomaSimples{
     public static void main(String args[]){
 
         int n1, n2, soma = 0;
-
+        
+        try{
         n1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro número inteiro"));
         n2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo número inteiro"));
 
         soma = (n1 + n2);
 
         JOptionPane.showMessageDialog(null, "A soma dos números é " + soma);
+        
+        } catch(NumberFormatException ex){
+            JOptionPane.showMessageDialog(null, "Digite apenas números inteiros!", "Atenção!", JOptionPane.ERROR_MESSAGE);
+        }
     }
 }
